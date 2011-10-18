@@ -29,17 +29,19 @@ module, then run something like this:
     sha256 is not very big. New applications should choose
     sha256 or better.
 
- - `password`
+ - `password` (bytes)
 
-    The arbitrary-length password (passphrase) (bytes)
+    The arbitrary-length password (passphrase). Note that this
+    is a bytes() object, not a string. If your password is a
+    utf-8 string, simple put `password.encode()`.
 
- - `salt`
+ - `salt` (bytes)
 
     A bunch of random bytes, generated using a cryptographically
     strong random number generator (such as `os.urandom()`). NIST
     recommend the salt be _at least_ 128bits (16 bytes) long.
 
- - `count`
+ - `count` (int >= 1)
 
     The iteration count. Set this value as large as you can
     tolerate. NIST recommend that the absolute minimum value
@@ -47,7 +49,7 @@ module, then run something like this:
     tens of thousands, or however many cause about a half-second
     delay to the user.
 
- - `dk_length`
+ - `dk_length` (int >= 1)
 
     The lenght of the desired key in bytes. This doesn't need
     to be the same size as the hash functions digest size, but
