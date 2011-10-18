@@ -20,7 +20,7 @@ For proper usage, see NIST Special Publication 800-132:
 The arguments for this function are:
 
  - `digestmod`
-    a crypographic hash constructor, such as hashlib.sha256
+    a crypographic hash constructor, such as `hashlib.sha256`
     which will be used as an argument to the hmac function.
     Note that the performance difference between sha1 and
     sha256 is not very big. New applications should choose
@@ -31,7 +31,7 @@ The arguments for this function are:
 
  - `salt`
     A bunch of random bytes, generated using a cryptographically
-    strong random number generator (such as os.urandom()). NIST
+    strong random number generator (such as `os.urandom()`). NIST
     recommend the salt be _at least_ 128bits (16 bytes) long.
 
  - `count`
