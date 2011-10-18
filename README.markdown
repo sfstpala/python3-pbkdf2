@@ -17,11 +17,12 @@ module, then run something like this:
 <http://tools.ietf.org/html/rfc2898>
 
 **For proper usage, see NIST Special Publication 800-132**  
-<http://csrc.nist.gov/publications/PubsSPs.html>
+<http://csrc.nist.gov/publications/nistpubs/800-132/nist-sp800-132.pdf>
 
 ## Arguments
 
  - `digestmod`
+
     a crypographic hash constructor, such as `hashlib.sha256`
     which will be used as an argument to the hmac function.
     Note that the performance difference between sha1 and
@@ -29,14 +30,17 @@ module, then run something like this:
     sha256 or better.
 
  - `password`
+
     The arbitrary-length password (passphrase) (bytes)
 
  - `salt`
+
     A bunch of random bytes, generated using a cryptographically
     strong random number generator (such as `os.urandom()`). NIST
     recommend the salt be _at least_ 128bits (16 bytes) long.
 
  - `count`
+
     The iteration count. Set this value as large as you can
     tolerate. NIST recommend that the absolute minimum value
     be 1000. However, it should generally be in the range of
@@ -44,6 +48,7 @@ module, then run something like this:
     delay to the user.
 
  - `dk_length`
+
     The lenght of the desired key in bytes. This doesn't need
     to be the same size as the hash functions digest size, but
     it makes sense to use a larger digest hash function if your
