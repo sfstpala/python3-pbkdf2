@@ -1,4 +1,4 @@
-Password based key-derivation function - PBKDF2
+# Password based key-derivation function - PBKDF2
 
 To use this in your application, simply download the
 module, then run something like this:
@@ -11,13 +11,13 @@ module, then run something like this:
     b'\x1e\xa9\xa0\xa7N\xf6\x97\x9ce\x94ZpU\x03n?'
 
 
-PBKDF2, from PKCS #5 v2.0:
-    <http://tools.ietf.org/html/rfc2898>
+**PBKDF2, from PKCS #5 v2.0**  
+<http://tools.ietf.org/html/rfc2898>
 
-For proper usage, see NIST Special Publication 800-132:
-    <http://csrc.nist.gov/publications/PubsSPs.html>
+**For proper usage, see NIST Special Publication 800-132**  
+<http://csrc.nist.gov/publications/PubsSPs.html>
 
-The arguments for this function are:
+## Arguments
 
  - `digestmod`
     a crypographic hash constructor, such as `hashlib.sha256`
@@ -47,6 +47,7 @@ The arguments for this function are:
     it makes sense to use a larger digest hash function if your
     key size is large. 
 
+## Copyright Notice
 
     Copyright (c) 2011, Stefano Palazzo <stefano.palazzo@gmail.com>
 
