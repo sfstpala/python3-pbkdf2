@@ -1,5 +1,7 @@
 # Password based key-derivation function - PBKDF2
 
+http://en.wikipedia.org/wiki/PBKDF2
+
 To use this in your application, simply download the
 module, then run something like this:
 
